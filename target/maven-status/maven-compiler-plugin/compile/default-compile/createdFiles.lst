@@ -1,0 +1,6 @@
+br\com\yuriramalhopinheiro\CdiConfig.class
+br\com\yuriramalhopinheiro\ProdutoRepository.class
+br\com\yuriramalhopinheiro\Produto.class
+br\com\yuriramalhopinheiro\ProdutoBean.class
+br\com\yuriramalhopinheiro\EntityManagerFactoryProducer.class
+br\com\yuriramalhopinheiro\Repository.class
