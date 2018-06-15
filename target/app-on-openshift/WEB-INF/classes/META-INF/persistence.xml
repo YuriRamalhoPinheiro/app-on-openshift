@@ -9,17 +9,18 @@
 		<class>br.com.yuriramalhopinheiro.Produto</class>
 		
 		<properties>
-		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spring_data"/>
+		<!-- 
+		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spring-data"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="mestre"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-		 	
-		 <!--	
-		 	<property name="javax.persistence.jdbc.url" value="mysql://mysql3:3306/sampledb"/>
-			<property name="javax.persistence.jdbc.user" value="userSWL"/>
-			<property name="javax.persistence.jdbc.password" value="0rNwCg6O2M5LnuGc"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 		 -->	
+		
+		 	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.app-on-openshift.svc:3306/sampledb"/>
+			<property name="javax.persistence.jdbc.user" value="userTPI"/>
+			<property name="javax.persistence.jdbc.password" value="cVL4MNCWTuJL3e8h"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+		 	
 			<!-- validate | update | create | create-drop --> 
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
 			<property name="hibernate.show_sql" value="true"/>

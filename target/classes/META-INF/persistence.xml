@@ -9,14 +9,14 @@
 		<class>br.com.yuriramalhopinheiro.Produto</class>
 		
 		<properties>
-		 <!--
+		<!-- 
 		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spring-data"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="mestre"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 		 -->	
 		
-		 	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://172.30.27.188:3306/sampledb"/>
+		 	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.app-on-openshift.svc:3306/sampledb"/>
 			<property name="javax.persistence.jdbc.user" value="userTPI"/>
 			<property name="javax.persistence.jdbc.password" value="cVL4MNCWTuJL3e8h"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

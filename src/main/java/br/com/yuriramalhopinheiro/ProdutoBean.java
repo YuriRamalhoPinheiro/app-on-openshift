@@ -3,13 +3,15 @@ package br.com.yuriramalhopinheiro;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
 
 @Named("produtoBean")
-@RequestScoped
+@ViewScoped
 public class ProdutoBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -19,20 +21,27 @@ public class ProdutoBean implements Serializable {
 
 	@Inject
 	private Repository repository;
-	
+
+	private List<Produto> produtos;
+
 	@Transactional
 	public String adicionar() {
 		produto = this.repository.save(produto);
-		
-		System.out.println("Produto adicionado com sucesso!");
-		
-		List<Produto> produtos = this.repository.findAll();
-		
-		for(Produto produto : produtos) {
-			System.out.println(produto.getNome());
-		}
-		
-		return "index.xhtml?faces-redirect=true";
+
+		exibirMensagem("Produto " + this.produto.getNome() + " adicionado com sucesso!");
+
+		return "index.xhtml";
+	}
+
+	public void listar() {
+		this.setProdutos(this.repository.findAll());
+	}
+
+	private void exibirMensagem(String mensagem) {
+		FacesMessage message = new FacesMessage(mensagem);
+
+		FacesContext currentInstance = FacesContext.getCurrentInstance();
+		currentInstance.addMessage(null, message);
 	}
 
 	public Produto getProduto() {
@@ -41,6 +50,14 @@ public class ProdutoBean implements Serializable {
 
 	public void setProduto(Produto produto) {
 		this.produto = produto;
+	}
+
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
 
 }

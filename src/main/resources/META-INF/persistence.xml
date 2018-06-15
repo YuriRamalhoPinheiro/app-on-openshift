@@ -9,7 +9,7 @@
 		<class>br.com.yuriramalhopinheiro.Produto</class>
 		
 		<properties>
-		 <!--
+		<!-- 
 		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spring-data"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="mestre"/>

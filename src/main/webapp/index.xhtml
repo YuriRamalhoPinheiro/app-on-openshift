@@ -7,15 +7,20 @@
 	<title>Dashboard</title>
 </h:head>
 <h:body>
-	<h:form>
-
-		<p:panelGrid columns="1">
-			<p:outputLabel value="Olá, seja bem vindo!" />
-
+	<h3>Olá, seja bem vindo!</h3>
+		
+	<h:form >
+		<p:messages autoUpdate="true" closable="true" />
+			
+		<p:panelGrid id="idGrid" columns="1" styleClass="ui-noborder">
+			
 			<p:outputLabel value="Nome do produto:" />
 			<p:inputText value="#{produtoBean.produto.nome}" />
 
-			<p:commandButton value="Adicionar" action="#{produtoBean.adicionar}" update="@form"/>
+			<p:commandButton value="Adicionar" action="#{produtoBean.adicionar}" 
+							 update="@form" />
+							 
+			<p:button value="Visualizar produtos" outcome="lista_de_produtos.xhtml"/>				 
 		</p:panelGrid>
 
 	</h:form>
