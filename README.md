@@ -7,3 +7,5 @@ tecnologias:
 
 Maven, JSF e PrimeFaces, CDI e Weld, JPA2 e Hibernate e Spring Data JPA, Bean Validation,
 Wildfly.
+
+Link: http://app-on-openshift-app-on-openshift.a3c1.starter-us-west-1.openshiftapps.com/app-on-openshift/
